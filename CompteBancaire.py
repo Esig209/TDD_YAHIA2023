@@ -7,7 +7,6 @@
 import uuid
 from datetime import datetime, timedelta
 
-
 class CompteBancaire:
     def __init__(self, proprietaire, adresse, solde_initial=0, limite_decouvert_quotidien=0):
         self.proprietaire = proprietaire
@@ -63,4 +62,5 @@ class CompteBancaire:
             self.date_dernier_decouvert = maintenant
         # Vérifier si le retrait est autorisé en fonction de la limite de découvert quotidien
         return self.solde + montant < -self.limite_decouvert_quotidien
+
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
